@@ -7,3 +7,7 @@ The Hermes bundle was rebuilt from source commit `8bd2da2` using Node 22 and `ex
 The same bundle was installed and tested in the completed simulator binary. Its SHA-256 matches the release bundle. Native libraries and assets are unchanged. Strict recursive code-signature verification passed; EAS Submit uploaded the archive to Apple. EAS's remote build number is 4 so the next normal build will increment to 5.
 
 See `release-status.json` for build IDs and hashes, and `validation.json` for verification. Future releases can use the normal EAS build command once the account's quota resets.
+
+# Build 5 — OpenCrossword
+
+Source `d8404e4` renames the app to OpenCrossword and emphasizes “100% free. No ads. Just daily crosswords.” The production Hermes bundle and `CFBundleDisplayName` were updated using the same verified packaging process. The signed archive uses build number 5; EAS’s remote build number is also 5. Native libraries, dependencies, entitlements, and assets remain unchanged. Updated home screenshots were captured on iPhone and iPad.

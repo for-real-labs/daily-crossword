@@ -1,6 +1,6 @@
 {
   "date": "2026-10-24",
-  "sourceCommit": "8bd2da2aea9bc08765ce80922133b150bd2ef8e0",
+  "sourceCommit": "d8404e4011e40b689de6428a089c12fe0c43db9c",
   "automatedTests": 20,
   "puzzlesValidated": 3000,
   "typecheck": "PASS",
@@ -15,9 +15,10 @@
     "Grid alignment and narrow letter visibility",
     "Crossing answer entry and clue progression",
     "Full puzzle completion",
-    "Completed archive and same-day new-puzzle lock"
+    "Completed archive and same-day new-puzzle lock",
+    "OpenCrossword name and free/no-ads text fit iPhone and iPad"
   ],
   "releaseBundleMatchesTestedSimulator": true,
   "signatureVerification": "codesign --verify --deep --strict: PASS",
-  "note": "Build 4 was packaged locally after the Expo free build quota was reached. Native dependencies are unchanged from the EAS production build."
+  "note": "Build 5 uses the unchanged native binary with updated display name and production Hermes bundle. Branding tested on iPhone and iPad."
 }

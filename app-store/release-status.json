@@ -5,20 +5,31 @@
   "status": "WAITING_FOR_REVIEW",
   "productionBuildId": null,
   "simulatorBuildId": "baa45881-39cb-46ed-821b-d3743cf15797",
-  "submissionId": "dbc01fc3-5e04-42f3-8dcf-82a1c039d8e1",
+  "submissionId": "7fa5492c-9843-4b31-926b-d5fc8aa1b08e",
   "uploadStatus": "VALID",
   "price": "FREE",
   "privacy": "DATA_NOT_COLLECTED",
   "releaseType": "AFTER_APPROVAL",
   "territories": 175,
-  "buildNumber": "4",
-  "sourceCommit": "8bd2da2aea9bc08765ce80922133b150bd2ef8e0",
+  "buildNumber": "5",
+  "sourceCommit": "d8404e4011e40b689de6428a089c12fe0c43db9c",
   "nativeBaseBuildId": "42f6f019-6de1-4836-9c5c-515cbc302122",
-  "appleBuildId": "347fc5a0-fc12-4ec1-b73f-b6f642faf240",
+  "appleBuildId": "7da6d886-5989-4a33-b618-64bff8724a91",
   "packaging": "Existing EAS native binary with rebuilt Hermes bundle, locally signed with the existing Apple distribution certificate",
-  "archiveSha256": "19cd256aa98396b7af91250fa8e2ce5ee8dbc0fa01b89c72ce86626bc27bc2b2",
-  "bundleSha256": "8279d986415b8c5b0526f59fbbbc22e395cf78279fa6826905d210d36af96c54",
-  "reviewSubmissionId": "cfc5ce81-76b9-49fb-96d2-db1e1390e297",
-  "submittedDate": "2026-10-24T23:17:13.344Z",
-  "reviewStatus": "WAITING_FOR_REVIEW"
+  "archiveSha256": "6e50397131d4b138820de8f1c19846b0b12f7dfa022dbdd0f7b58de6bffb59d9",
+  "bundleSha256": "6bc8748259e9a0aef6f456783a563d4aafd510d46a553c30fe2fec04765fb6a4",
+  "reviewSubmissionId": "697756b7-5b05-4817-92a4-e4945eb1b805",
+  "submittedDate": "2026-10-24T23:24:51.491Z",
+  "reviewStatus": "WAITING_FOR_REVIEW",
+  "name": "OpenCrossword",
+  "storeScreenshots": {
+    "iphone": [
+      "01-home.png",
+      "02-puzzle.png"
+    ],
+    "ipad": [
+      "01-home.png",
+      "02-puzzle.png"
+    ]
+  }
 }
