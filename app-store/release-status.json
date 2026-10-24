@@ -2,26 +2,26 @@
   "appId": "6826699052",
   "versionId": "de95169d-6a42-4d71-aba3-da8da2ba366a",
   "localizationId": "063aa70f-b5da-423d-93ae-bfca93340c2c",
-  "status": "WAITING_FOR_REVIEW",
+  "status": "DEVELOPER_REJECTED",
   "productionBuildId": null,
   "simulatorBuildId": "baa45881-39cb-46ed-821b-d3743cf15797",
-  "submissionId": "7fa5492c-9843-4b31-926b-d5fc8aa1b08e",
-  "uploadStatus": "VALID",
+  "submissionId": "003b144a-4a94-430c-b278-394d2e7e6786",
+  "uploadStatus": "PROCESSING",
   "price": "FREE",
   "privacy": "DATA_NOT_COLLECTED",
   "releaseType": "AFTER_APPROVAL",
   "territories": 175,
-  "buildNumber": "5",
-  "sourceCommit": "d8404e4011e40b689de6428a089c12fe0c43db9c",
+  "buildNumber": "6",
+  "sourceCommit": "212ba8c44c9bb622a5da39b2643b50231e01fe4f",
   "nativeBaseBuildId": "42f6f019-6de1-4836-9c5c-515cbc302122",
-  "appleBuildId": "7da6d886-5989-4a33-b618-64bff8724a91",
+  "appleBuildId": "844a0b87-936c-4420-9ec4-336262a6c829",
   "packaging": "Existing EAS native binary with rebuilt Hermes bundle, locally signed with the existing Apple distribution certificate",
-  "archiveSha256": "6e50397131d4b138820de8f1c19846b0b12f7dfa022dbdd0f7b58de6bffb59d9",
-  "bundleSha256": "6bc8748259e9a0aef6f456783a563d4aafd510d46a553c30fe2fec04765fb6a4",
+  "archiveSha256": "4484a084a67e28268379d5b2478a3b8d88fe1bffb25f60265f597c6d53b9166a",
+  "bundleSha256": "a3579fd1bd1d2317e149e01d56b3aecbd0765ca92db41017988c9c097bcca284",
   "reviewSubmissionId": "697756b7-5b05-4817-92a4-e4945eb1b805",
   "submittedDate": "2026-10-24T23:24:51.491Z",
-  "reviewStatus": "WAITING_FOR_REVIEW",
-  "name": "OpenCrossword",
+  "reviewStatus": "CANCELED",
+  "name": "Crossword: No Ads",
   "storeScreenshots": {
     "iphone": [
       "01-home.png",
@@ -31,5 +31,6 @@
       "01-home.png",
       "02-puzzle.png"
     ]
-  }
+  },
+  "pending": "Feature images: awaiting generation spending limit; resubmit after assets are complete"
 }
