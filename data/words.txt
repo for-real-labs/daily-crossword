@@ -1,0 +1,439 @@
+ACORN|Oak tree seed
+ACTOR|Someone playing a role
+ADULT|A grown-up
+ALARM|Wake-up sound
+ALBUM|Collection of songs
+ALIEN|Visitor from another planet
+ALLEY|Narrow lane between buildings
+AMBER|Golden fossilized resin
+ANGLE|Where two lines meet
+ANKLE|Joint above the foot
+APPLE|Fruit in a classic pie
+APRON|Cook's clothing protector
+ARCH|Curved doorway top
+ARROW|Bow's projectile
+ATLAS|Book of maps
+ATTIC|Room under a roof
+AUDIO|Sound, rather than video
+BADGE|Emblem pinned to a uniform
+BAGEL|Ring-shaped bread
+BAKER|Bread maker
+BALLET|Dance with pointe shoes
+BANJO|Five-string folk instrument
+BASIL|Herb in pesto
+BEACH|Sandy ocean shore
+BEARD|Chin hair
+BEE|Honey maker
+BELL|Sounding device in a tower
+BENCH|Seat in a park
+BERRY|Small juicy fruit
+BIRCH|Tree with papery bark
+BIRD|Animal with feathers
+BLADE|Sharp part of a knife
+BLANK|Not filled in
+BLINK|Close and open your eyes
+BLOOM|A flower, or to flower
+BOARD|Flat piece of lumber
+BOAT|Small watercraft
+BONE|Part of a skeleton
+BOOK|Bound pages to read
+BOOTS|Footwear for muddy walks
+BOWL|Dish for soup
+BRAIN|Organ inside the skull
+BRASS|Copper and zinc alloy
+BREAD|Sandwich staple
+BRICK|Clay building block
+BRIDE|Woman getting married
+BRIDGE|Structure spanning a river
+BROOM|Tool for sweeping
+BRUSH|Tool for painting
+BUBBLE|Air sphere in soapy water
+BUD|Unopened flower
+CABIN|Small house in the woods
+CACTUS|Prickly desert plant
+CAGE|Enclosure with bars
+CAKE|Birthday dessert
+CAMEL|Desert animal with humps
+CAMP|Sleep outdoors in a tent
+CANAL|Waterway built by people
+CANDLE|Wax light with a wick
+CANDY|Sugary treat
+CANOE|Narrow boat moved with a paddle
+CAPE|Sleeveless superhero garment
+CARROT|Orange root vegetable
+CART|Basket on wheels
+CASTLE|Fortified home of royalty
+CEDAR|Fragrant evergreen wood
+CELLO|Bowed instrument larger than a viola
+CHAIR|Seat for one
+CHALK|White stick for a blackboard
+CHARM|Small ornament on a bracelet
+CHEEK|Part of the face beside the nose
+CHERRY|Small red fruit with a pit
+CHESS|Game with kings and queens
+CHEST|Box for buried treasure
+CHICK|Baby chicken
+CHIME|Musical ringing sound
+CHIN|Below the lower lip
+CHOIR|Group of singers
+CIRCLE|Shape with no corners
+CLAM|Shellfish that may go in chowder
+CLAW|Cat's sharp nail
+CLAY|Material shaped by a potter
+CLIFF|Steep rock face
+CLIMB|Go up a ladder
+CLOCK|Device that tells time
+CLOUD|White shape drifting in the sky
+CLOVER|Plant with lucky four-leaf varieties
+COACH|Leader of a sports team's training
+COAST|Land beside the sea
+COBRA|Snake with a hood
+COCOA|Hot chocolate ingredient
+COIN|Metal money
+COMET|Space object with a bright tail
+CORAL|Reef-building marine animal
+CORK|Wine bottle stopper
+CORN|Vegetable on a cob
+COUCH|Living room sofa
+CRAB|Sideways-walking crustacean
+CRANE|Tall machine for lifting loads
+CRATE|Wooden shipping box
+CREEK|Small stream
+CROWN|Royal headwear
+CRUMB|Tiny piece of bread
+CUB|Young bear
+CUBE|Shape with six square faces
+CURL|Spiral lock of hair
+DAISY|Flower with a yellow center
+DANCE|Move to music
+DAWN|First light of day
+DEER|Antlered woodland animal
+DESK|Table for working
+DICE|Cubes rolled in board games
+DISH|Plate or bowl
+DIVER|Swimmer beneath the surface
+DOCK|Place where boats tie up
+DOME|Rounded roof
+DONUT|Ring-shaped fried treat
+DOOR|Entrance that swings open
+DOVE|Bird symbolizing peace
+DREAM|Story in your sleep
+DRESS|One-piece skirted garment
+DRIFT|Move slowly with a current
+DRUM|Instrument struck with sticks
+DUCK|Waterbird that quacks
+DUNE|Hill of sand
+EAGLE|Large bird of prey
+EAR|Organ for hearing
+EARTH|Our home planet
+EASEL|Stand for a painter's canvas
+ECHO|Sound that comes back
+EGG|What a hen lays
+ELBOW|Joint in the middle of an arm
+ELM|Shade tree with a three-letter name
+EMBER|Glowing bit of a dying fire
+EMPTY|Containing nothing
+ENVELOPE|Paper cover for a letter
+ERASER|Tool for removing pencil marks
+FABLE|Story with a moral
+FACE|Front of the head
+FARM|Place where crops grow
+FEAST|Large celebratory meal
+FENCE|Boundary around a yard
+FERN|Plant with fronds
+FERRY|Boat carrying people across water
+FIELD|Open stretch of land
+FINCH|Small songbird
+FIRE|Flames and heat
+FLAME|Visible part of a fire
+FLASK|Small narrow-necked container
+FLEECE|Sheep's woolly coat
+FLOOR|Surface beneath your feet indoors
+FLOUR|Powder used to make bread
+FLUTE|Woodwind held sideways
+FOAM|Mass of tiny bubbles
+FORK|Utensil with prongs
+FOX|Wild animal with a bushy tail
+FRAME|Border around a picture
+FROG|Amphibian that croaks
+FROST|Thin layer of ice on grass
+FRUIT|Apples and oranges, for example
+FUDGE|Soft chocolate confection
+GALE|Very strong wind
+GAME|Activity with rules and a winner
+GARDEN|Place to grow flowers
+GATE|Entrance in a fence
+GEM|Precious stone
+GHOST|Spirit in a haunted house
+GIANT|Being much larger than a human
+GIFT|Present with a bow
+GIRAFFE|Animal with a very long neck
+GLASS|Material in a windowpane
+GLOBE|Round model of Earth
+GLOVE|Covering for a hand
+GOAT|Farm animal with horns and a beard
+GOLD|Metal with the symbol Au
+GOOSE|Waterbird that honks
+GRAPE|Fruit dried into a raisin
+GRASS|Green covering on a lawn
+GREEN|Color of emeralds
+GRILL|Outdoor cooking grate
+GROVE|Small group of trees
+GUITAR|Six-string instrument
+HAIL|Ice pellets falling from clouds
+HAMMER|Tool for driving nails
+HARP|Large triangular string instrument
+HAT|Head covering
+HAWK|Sharp-eyed bird of prey
+HEART|Organ that pumps blood
+HEDGE|Living fence of shrubs
+HERON|Long-legged wading bird
+HILL|Raised land smaller than a mountain
+HIVE|Bees' home
+HONEY|Sweet food made by bees
+HOOK|Curved tool on a fishing line
+HORSE|Animal ridden with a saddle
+HOUSE|Building where a family lives
+ICE|Frozen water
+IGLOO|Shelter made from snow blocks
+INK|Liquid in a pen
+IRIS|Colored part of the eye
+IRON|Metal with the symbol Fe
+ISLAND|Land surrounded by water
+IVORY|Creamy white color
+IVY|Plant that climbs walls
+JAM|Fruit spread for toast
+JAR|Glass container with a lid
+JAZZ|Music often featuring improvisation
+JEANS|Denim pants
+JELLY|Wobbly fruit spread
+JET|Fast aircraft
+JEWEL|Precious stone in a setting
+JIGSAW|Puzzle made of interlocking pieces
+JOKE|Something told for a laugh
+JUICE|Drink squeezed from fruit
+KETTLE|Vessel for boiling water
+KEY|Object that opens a lock
+KITE|Toy flown on a string
+KNEE|Joint in the middle of a leg
+KNIFE|Utensil used for cutting
+KNIT|Make a scarf with two needles
+KNOT|Loop tightened in a rope
+KOALA|Australian eucalyptus eater
+LABEL|Tag identifying an item
+LADDER|Climbing tool with rungs
+LAKE|Inland body of water
+LAMB|Young sheep
+LAMP|Light on a bedside table
+LANTERN|Portable light with a handle
+LAVA|Molten rock above ground
+LEAF|Green part of a tree
+LEMON|Sour yellow citrus fruit
+LENS|Curved glass in eyeglasses
+LETTER|Single character in an alphabet
+LIGHT|Opposite of darkness
+LILY|Flower often grown from a bulb
+LIME|Sour green citrus fruit
+LION|Big cat with a mane
+LIZARD|Reptile that may shed its tail
+LOAF|A whole baked bread
+LOCK|Device opened with a key
+LOG|Cut section of a tree trunk
+LOTUS|Aquatic flower with floating leaves
+LUNCH|Midday meal
+MAGNET|Object that attracts iron
+MAP|Guide showing roads and places
+MARBLE|Small glass ball used in games
+MASK|Covering worn over the face
+MAZE|Puzzle of winding paths
+MEADOW|Grassy field of wildflowers
+MELON|Fruit such as cantaloupe
+METAL|Material such as copper or iron
+MILK|Drink from a dairy cow
+MINT|Herb used to flavor toothpaste
+MIRROR|Surface that reflects your face
+MOON|Earth's natural satellite
+MOOSE|Large deer with broad antlers
+MOSS|Soft green growth on rocks
+MOTH|Winged insect drawn to a lamp
+MOUSE|Small rodent that squeaks
+MUG|Cup with a handle
+NAIL|Metal fastener hit by a hammer
+NEST|Bird's home
+NET|Mesh used to catch fish
+NIGHT|Time between sunset and sunrise
+NOSE|Part of the face used to smell
+NURSE|Medical worker who cares for patients
+OAK|Tree that grows acorns
+OAR|Tool for rowing a boat
+OCEAN|Vast body of salt water
+OLIVE|Small fruit pressed for oil
+ONION|Layered vegetable that may make you cry
+OPAL|Gem with shifting colors
+ORANGE|Citrus fruit and a color
+ORBIT|Path of a planet around a star
+OTTER|Playful swimming mammal
+OVEN|Appliance for baking
+OWL|Bird associated with wisdom
+PADDLE|Tool for moving a canoe
+PAINT|Color brushed onto a wall
+PALM|Inside surface of a hand
+PANDA|Black-and-white bear
+PAPER|Material in a notebook
+PARK|Public green space
+PATCH|Piece sewn over a hole
+PATH|Track for walking
+PEACH|Fuzzy fruit with a pit
+PEAR|Fruit with a narrow top and round base
+PEARL|Gem formed inside an oyster
+PEBBLE|Small rounded stone
+PEN|Writing tool filled with ink
+PENCIL|Writing tool with an eraser
+PENNY|One-cent coin
+PEPPER|Seasoning paired with salt
+PETAL|Colorful part of a flower
+PIANO|Instrument with 88 keys
+PICKLE|Cucumber preserved in brine
+PIE|Dessert baked in a crust
+PILLOW|Soft support for your head in bed
+PINE|Evergreen tree with needles
+PIZZA|Cheesy dish cut into slices
+PLANE|Vehicle with wings
+PLANT|Living thing with roots
+PLATE|Flat dish for a meal
+PLUM|Purple fruit with a pit
+POEM|Piece of verse
+POND|Body of water smaller than a lake
+PONY|Small horse
+POOL|Place to swim laps
+PORCH|Covered area outside a front door
+POT|Deep vessel for cooking
+PRISM|Glass shape that splits light into colors
+PULSE|Rhythmic beat felt at the wrist
+PUPPY|Young dog
+QUAIL|Small bird with a short tail
+QUEEN|Female monarch
+QUILL|Feather used as a pen
+QUILT|Bed covering made from sewn pieces
+RADIO|Device for listening to broadcasts
+RAFT|Flat floating platform
+RAIN|Water falling from clouds
+RAKE|Garden tool for gathering leaves
+RAVEN|Large black bird
+REED|Tall plant growing by water
+REEF|Underwater ridge of coral
+RIBBON|Narrow fabric strip for tying a gift
+RICE|Small grains served with curry
+RING|Jewelry worn on a finger
+RIVER|Flowing body of fresh water
+ROBOT|Programmable mechanical helper
+ROCK|Solid natural mineral material
+ROOF|Top covering of a building
+ROOT|Part of a plant beneath the soil
+ROPE|Thick cord
+ROSE|Flower with thorns
+ROUND|Shaped like a circle
+ROW|Line of seats in a theater
+RUBY|Red gemstone
+RULER|Straight tool for measuring length
+SADDLE|Seat on a horse
+SAIL|Fabric that catches wind on a boat
+SALAD|Dish of mixed leafy vegetables
+SALT|Seasoning paired with pepper
+SAND|Tiny grains on a beach
+SCARF|Warm wrap for the neck
+SEAL|Marine mammal with flippers
+SEED|Plant's starting point
+SHADE|Shelter from direct sunlight
+SHARK|Ocean predator with many teeth
+SHEEP|Wool-producing farm animal
+SHELL|Hard outer covering of a snail
+SHIP|Large seagoing vessel
+SHOE|Covering for a foot
+SHORE|Land at the edge of water
+SILK|Smooth fabric from cocoons
+SKATE|Glide on ice with blades
+SKETCH|Quick drawing
+SKY|What you see when you look straight up outside
+SLED|Vehicle that slides over snow
+SLEEP|Rest with your eyes closed
+SLICE|Thin cut piece of bread
+SMILE|Happy facial expression
+SNAIL|Slow animal with a spiral shell
+SNAKE|Legless reptile
+SNOW|Frozen flakes falling from clouds
+SOAP|Substance used to wash hands
+SOCK|Clothing worn inside a shoe
+SOFA|Long padded seat
+SONG|Music with words
+SPADE|Tool for digging soil
+SPARK|Tiny glowing particle from a fire
+SPEAR|Weapon with a pointed shaft
+SPICE|Seasoning such as cinnamon
+SPOON|Utensil for eating soup
+SQUID|Sea creature with ten appendages
+STAGE|Platform for a performance
+STAMP|Postage stuck to an envelope
+STAR|Point of light in the night sky
+STEAM|Vapor rising from boiling water
+STEM|Stalk supporting a flower
+STONE|Small piece of rock
+STORM|Weather with thunder and lightning
+STOVE|Appliance with cooking burners
+STRAW|Tube for sipping a drink
+STREAM|Small flowing waterway
+STRING|Thin cord
+SUGAR|Sweet crystals added to tea
+SUN|Star at the center of our solar system
+SWAN|Graceful bird with a long neck
+SWEET|Tasting like honey
+SWING|Playground seat hanging from chains
+TABLE|Furniture with a flat top and legs
+TAIL|Part wagged by a happy dog
+TEA|Drink made by steeping leaves
+TENT|Portable fabric shelter
+THORN|Sharp point on a rose stem
+TIDE|Ocean's regular rise and fall
+TIGER|Striped big cat
+TILE|Small slab covering a floor
+TOAST|Bread browned by heat
+TOKEN|Small disk used in place of money
+TOOL|Object used to do a job
+TORCH|Flame carried on a stick
+TOWER|Tall narrow structure
+TRAIN|Vehicle running on rails
+TRAY|Flat surface for carrying dishes
+TREE|Tall plant with a trunk
+TRUNK|Main woody stem of a tree
+TULIP|Cup-shaped spring flower
+TUNE|A melody
+TURTLE|Reptile with a hard shell
+TWIG|Small branch
+UNCLE|Your parent's brother
+VALLEY|Low land between hills
+VASE|Container for cut flowers
+VELVET|Fabric with a soft dense pile
+VINE|Plant that climbs or trails
+VIOLIN|Small bowed string instrument
+VOICE|Sound produced when you speak
+WAGON|Four-wheeled cart
+WALNUT|Nut with a hard wrinkled shell
+WATER|Liquid with the formula H2O
+WAVE|Rising curl of seawater
+WAX|Material in a candle
+WHALE|Large ocean mammal
+WHEAT|Grain ground to make flour
+WHEEL|Round part that lets a bicycle roll
+WIND|Moving air
+WING|Bird's flight limb
+WOLF|Wild relative of the dog
+WOOD|Material from tree trunks
+WOOL|Fiber from sheep
+WREN|Small brown songbird
+WRIST|Joint between the hand and arm
+YACHT|Boat used for pleasure sailing
+YARN|Thread used for knitting
+YEAST|Ingredient that makes bread rise
+YOLK|Yellow part of an egg
+ZEBRA|Striped African animal
+ZIPPER|Fastener with interlocking teeth

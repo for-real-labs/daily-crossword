@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Daily Crossword",
+    "slug": "daily-crossword",
+    "owner": "jakesessiongalaxys-team",
+    "version": "1.0.0",
+    "scheme": "dailycrossword",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "backgroundColor": "#F7F6F0",
+    "ios": {
+      "bundleIdentifier": "com.forreallabs.dailycrossword",
+      "buildNumber": "1",
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      "expo-secure-store"
+    ],
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0052d217-6108-470d-bd31-b508a63ba306"
+      }
+    }
+  }
+}
