@@ -1,10 +1,10 @@
 {
-  "name": "OpenCrossword",
+  "name": "Crossword: No Ads",
   "subtitle": "100% free. No ads.",
   "description": "100% free. No ads. Just daily crosswords.\n\nA minimalist crossword app with one new puzzle each day.\n\n• 3,000 unique mini crosswords\n• Automatic progress saves\n• Continue unfinished puzzles anytime\n• Keep completed puzzles\n• Works offline\n\nNo account. No subscriptions. No purchases.\n\nA new puzzle unlocks at local midnight. Your puzzle library never repeats.",
   "keywords": "crossword,daily,mini,word,puzzle,free,offline,brain,relax,spelling,letters",
-  "supportUrl": "https://for-real-labs.github.io/daily-crossword/",
-  "privacyPolicyUrl": "https://for-real-labs.github.io/daily-crossword/#privacy",
+  "supportUrl": "https://for-real-labs.github.io/opencrossword/",
+  "privacyPolicyUrl": "https://for-real-labs.github.io/opencrossword/#privacy",
   "copyright": "2026 Jake Johnson",
   "reviewNotes": "No sign-in, payments, ads, tracking, or server connection. Tap New puzzle to start today's crossword. Tap a square to select it; tap again at a crossing to change direction. Use the letter keys, Clues, and Check. Home lists unfinished and completed puzzles. One new puzzle can be started per local calendar day; returning to any saved puzzle is unlimited. The app includes 3,000 original, connected mini crisscross grids. The next puzzle ID and start date are preserved in Keychain; progress is stored locally. No data is collected. The privacy/support link opens the system browser.",
   "releaseType": "AFTER_APPROVAL",

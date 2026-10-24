@@ -159,7 +159,7 @@ export function Home({
             label="Privacy & support"
             onPress={() => {
               void Linking.openURL(
-                "https://for-real-labs.github.io/daily-crossword/"
+                "https://for-real-labs.github.io/opencrossword/"
               ).catch(onError);
             }}
           />

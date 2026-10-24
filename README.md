@@ -38,4 +38,4 @@ npx eas-cli submit -p ios --profile production
 
 Signing and submission credentials are managed by the existing Expo account. Never commit private keys or signing certificates. Apple must approve a submission before it appears on the App Store.
 
-Support/privacy: https://for-real-labs.github.io/daily-crossword/
+Support/privacy: https://for-real-labs.github.io/opencrossword/
