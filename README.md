@@ -1,6 +1,6 @@
-# Daily Crossword
+# OpenCrossword
 
-A free, native Expo iOS app. One new crossword per local day, 3,000 original bundled puzzles, automatic saves, and a simple home screen with unfinished puzzles ordered by last opened and a completed archive. No login, ads, purchases, network requirement, or analytics.
+100% free. No ads. Just daily crosswords. A minimal native Expo iOS app. One new crossword per local day, 3,000 original bundled puzzles, automatic saves, and a simple home screen with unfinished puzzles ordered by last opened and a completed archive. No login, ads, purchases, network requirement, or analytics.
 
 ## Run
 

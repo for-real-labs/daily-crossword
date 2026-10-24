@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Daily Crossword",
+    "name": "OpenCrossword",
     "slug": "daily-crossword",
     "owner": "jakesessiongalaxys-team",
     "version": "1.0.0",
@@ -17,7 +17,11 @@
         "ITSAppUsesNonExemptEncryption": false
       }
     },
-    "plugins": ["expo-asset", "expo-font", "expo-secure-store"],
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      "expo-secure-store"
+    ],
     "web": {
       "favicon": "./assets/icon.png"
     },

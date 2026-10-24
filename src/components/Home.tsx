@@ -76,10 +76,10 @@ export function Home({
         <View>
           <View style={s.brand}>
             <MiniGrid done />
-            <Text style={s.brandText}>ONE A DAY</Text>
+            <Text style={s.brandText}>100% FREE · NO ADS</Text>
           </View>
-          <Text accessibilityRole="header" style={s.title}>
-            Crossword
+          <Text accessibilityRole="header" style={s.title} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.75}>
+            OpenCrossword
           </Text>
           <Text style={s.date}>
             {now.toLocaleDateString("en-US", {
@@ -153,7 +153,7 @@ export function Home({
       }
       ListFooterComponent={
         <View style={s.footer}>
-          <Text style={s.footerNote}>A little pause. Every day.</Text>
+          <Text style={s.footerNote}>Just free daily crosswords.</Text>
           <Button
             quiet
             label="Privacy & support"
@@ -201,7 +201,7 @@ const s = StyleSheet.create({
   dot: { width: 9, height: 9, borderRadius: 2 },
   title: {
     fontFamily: fonts.serif,
-    fontSize: 44,
+    fontSize: 34,
     letterSpacing: -1.5,
     color: colors.ink,
   },
