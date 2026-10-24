@@ -1,0 +1,12 @@
+{
+  "name": "Daily Crossword: One a Day",
+  "subtitle": "One free puzzle. Every day.",
+  "description": "One new crossword each day. Always free.\n\n\u2022 3,000 unique mini crosswords\n\u2022 Automatic progress saves\n\u2022 Continue unfinished puzzles anytime\n\u2022 Keep every completed puzzle\n\u2022 Works offline\n\nNo ads. No account. No subscriptions.\n\nA fresh puzzle unlocks each day at local midnight. Your puzzle library never repeats.",
+  "keywords": "crossword,daily,mini,word,puzzle,free,offline,brain,relax,spelling,letters",
+  "supportUrl": "https://for-real-labs.github.io/daily-crossword/",
+  "privacyPolicyUrl": "https://for-real-labs.github.io/daily-crossword/#privacy",
+  "copyright": "2026 Jake Johnson",
+  "reviewNotes": "No sign-in, payments, ads, tracking, or server connection. Tap New puzzle to start today's crossword. Tap a square to select it; tap again at a crossing to change direction. Use the letter keys, Clues, and Check. Home lists unfinished and completed puzzles. One new puzzle can be started per local calendar day; returning to any saved puzzle is unlimited. The app includes 3,000 original, connected mini crisscross grids. The next puzzle ID and start date are preserved in Keychain; progress is stored locally. No data is collected. The privacy/support link opens the system browser.",
+  "releaseType": "AFTER_APPROVAL",
+  "price": "FREE"
+}

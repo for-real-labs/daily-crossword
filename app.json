@@ -17,11 +17,7 @@
         "ITSAppUsesNonExemptEncryption": false
       }
     },
-    "plugins": [
-      "expo-asset",
-      "expo-font",
-      "expo-secure-store"
-    ],
+    "plugins": ["expo-asset", "expo-font", "expo-secure-store"],
     "web": {
       "favicon": "./assets/icon.png"
     },
