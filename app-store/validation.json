@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "sourceCommit": "8bd2da2aea9bc08765ce80922133b150bd2ef8e0",
+  "automatedTests": 20,
+  "puzzlesValidated": 3000,
+  "typecheck": "PASS",
+  "expoDoctor": "18/18 PASS",
+  "githubCI": "PASS",
+  "nativeDevices": [
+    "iPhone 16 Pro Max / iOS 18.3",
+    "iPad Pro 13-inch M4 / iOS 18.3"
+  ],
+  "nativeChecks": [
+    "Home and saved progress after relaunch",
+    "Grid alignment and narrow letter visibility",
+    "Crossing answer entry and clue progression",
+    "Full puzzle completion",
+    "Completed archive and same-day new-puzzle lock"
+  ],
+  "releaseBundleMatchesTestedSimulator": true,
+  "signatureVerification": "codesign --verify --deep --strict: PASS",
+  "note": "Build 4 was packaged locally after the Expo free build quota was reached. Native dependencies are unchanged from the EAS production build."
+}
