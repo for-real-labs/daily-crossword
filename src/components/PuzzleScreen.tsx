@@ -11,6 +11,7 @@ import {
 import { Game, Entry, cellKey, entryCells, getPuzzle } from "../game";
 import { colors, fonts } from "../theme";
 import { Button } from "./Button";
+import { boardGeometry } from "../layout";
 export function PuzzleScreen({
   game,
   onCell,
@@ -29,8 +30,7 @@ export function PuzzleScreen({
   const entry = p.entries[entryIndex],
     activeCells = entryCells(entry),
     done = !!game.completedAt;
-  const boardWidth = Math.min(width - 32, 480, Math.max(250, height - 330)),
-    cellSize = boardWidth / p.size;
+  const { boardWidth, cellSize } = boardGeometry(width, height, p.size);
   const selectEntry = (index: number) => {
     setEntryIndex(index);
     setSelected(entryCells(p.entries[index])[0]);
@@ -120,73 +120,82 @@ export function PuzzleScreen({
       </View>
       <ScrollView contentContainerStyle={s.playContent} style={{ flex: 1 }}>
         <View style={[s.board, { width: boardWidth, height: boardWidth }]}>
-          {p.rows.flatMap((row, r) =>
-            [...row].map((letter, c) => {
-              const key = cellKey(r, c),
-                number = p.entries.find(
-                  (e) => e.row === r && e.col === c
-                )?.number;
-              if (letter === ".")
+          {p.rows.map((row, r) => (
+            <View
+              key={r}
+              style={{
+                flexDirection: "row",
+                height: cellSize,
+                width: boardWidth,
+              }}
+            >
+              {[...row].map((letter, c) => {
+                const key = cellKey(r, c),
+                  number = p.entries.find(
+                    (e) => e.row === r && e.col === c
+                  )?.number;
+                if (letter === ".")
+                  return (
+                    <View
+                      key={key}
+                      style={{
+                        width: cellSize,
+                        height: cellSize,
+                        backgroundColor: colors.ink,
+                      }}
+                    />
+                  );
+                const error = checking && incorrect.includes(key);
                 return (
-                  <View
+                  <Pressable
                     key={key}
-                    style={{
-                      width: cellSize,
-                      height: cellSize,
-                      backgroundColor: colors.ink,
-                    }}
-                  />
-                );
-              const error = checking && incorrect.includes(key);
-              return (
-                <Pressable
-                  key={key}
-                  accessibilityRole="button"
-                  accessibilityLabel={`Row ${r + 1}, column ${c + 1}${
-                    number ? `, ${number}` : ""
-                  }, ${game.cells[key] || "blank"}${
-                    error ? ", incorrect" : ""
-                  }`}
-                  accessibilityState={{ selected: selected === key }}
-                  onPress={() => selectCell(key)}
-                  style={[
-                    s.cell,
-                    { width: cellSize, height: cellSize },
-                    activeCells.includes(key) && {
-                      backgroundColor: colors.highlight,
-                    },
-                    selected === key &&
-                      !done && { backgroundColor: colors.lime },
-                    done && { backgroundColor: "#F0F5E6" },
-                    error && { backgroundColor: "#F8DAD1" },
-                  ]}
-                >
-                  {number && (
+                    accessibilityRole="button"
+                    accessibilityLabel={`Row ${r + 1}, column ${c + 1}${
+                      number ? `, ${number}` : ""
+                    }, ${game.cells[key] || "blank"}${
+                      error ? ", incorrect" : ""
+                    }`}
+                    accessibilityState={{ selected: selected === key }}
+                    onPress={() => selectCell(key)}
+                    style={[
+                      s.cell,
+                      { width: cellSize, height: cellSize },
+                      activeCells.includes(key) && {
+                        backgroundColor: colors.highlight,
+                      },
+                      selected === key &&
+                        !done && { backgroundColor: colors.lime },
+                      done && { backgroundColor: "#F0F5E6" },
+                      error && { backgroundColor: "#F8DAD1" },
+                    ]}
+                  >
+                    {number && (
+                      <Text
+                        allowFontScaling={false}
+                        style={[
+                          s.number,
+                          { fontSize: Math.max(8, cellSize * 0.23) },
+                        ]}
+                      >
+                        {number}
+                      </Text>
+                    )}
                     <Text
                       allowFontScaling={false}
                       style={[
-                        s.number,
-                        { fontSize: Math.max(8, cellSize * 0.23) },
+                        s.letter,
+                        { fontSize: cellSize * 0.53 },
+                        error && { color: colors.error },
                       ]}
                     >
-                      {number}
+                      {game.cells[key] || ""}
                     </Text>
-                  )}
-                  <Text
-                    allowFontScaling={false}
-                    style={[
-                      s.letter,
-                      { fontSize: cellSize * 0.53 },
-                      error && { color: colors.error },
-                    ]}
-                  >
-                    {game.cells[key] || ""}
-                  </Text>
-                  {error && <View style={s.errorDot} />}
-                </Pressable>
-              );
-            })
-          )}
+                    {error && <View style={s.errorDot} />}
+                  </Pressable>
+                );
+              })}
+            </View>
+          ))}
         </View>
         {caption && (
           <Text
@@ -314,8 +323,7 @@ const s = StyleSheet.create({
   heading: { fontFamily: fonts.medium, color: colors.ink, fontSize: 15 },
   playContent: { alignItems: "center", paddingTop: 8, paddingBottom: 8 },
   board: {
-    flexDirection: "row",
-    flexWrap: "wrap",
+    flexDirection: "column",
     backgroundColor: colors.ink,
     borderRadius: 8,
     overflow: "hidden",

@@ -10,8 +10,8 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "puzzles": "node scripts/generate-puzzles.mjs",
-    "build:ios": "eas build -p ios --profile production",
-    "submit:ios": "eas submit -p ios --profile production"
+    "build:ios": "npx eas-cli build -p ios --profile production",
+    "submit:ios": "npx eas-cli submit -p ios --profile production"
   },
   "dependencies": {
     "@expo-google-fonts/dm-sans": "^0.4.2",

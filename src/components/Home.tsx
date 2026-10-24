@@ -97,7 +97,7 @@ export function Home({
                   ? "All done"
                   : "See you tomorrow"}
               </Text>
-              <Text style={s.sun}>{available ? "✳" : "✓"}</Text>
+              <Text style={s.sun}>{available ? "✦" : "✓"}</Text>
             </View>
             {available ? (
               <Button
