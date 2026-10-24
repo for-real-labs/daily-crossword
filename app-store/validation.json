@@ -1,6 +1,6 @@
 {
   "date": "2026-10-24",
-  "sourceCommit": "d8404e4011e40b689de6428a089c12fe0c43db9c",
+  "sourceCommit": "212ba8c44c9bb622a5da39b2643b50231e01fe4f",
   "automatedTests": 20,
   "puzzlesValidated": 3000,
   "typecheck": "PASS",
@@ -20,5 +20,6 @@
   ],
   "releaseBundleMatchesTestedSimulator": true,
   "signatureVerification": "codesign --verify --deep --strict: PASS",
-  "note": "Build 5 uses the unchanged native binary with updated display name and production Hermes bundle. Branding tested on iPhone and iPad."
+  "note": "Build 6 uses the unchanged native binary with updated support URL and production Hermes bundle. Native screenshots and all six feature exports inspected on iPhone and iPad layouts.",
+  "storeExportTests": 2
 }

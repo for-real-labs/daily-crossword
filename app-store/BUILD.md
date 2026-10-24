@@ -14,4 +14,4 @@ Source `d8404e4` renames the app to OpenCrossword and emphasizes “100% free. N
 
 # Build 6 — repository links
 
-Source `212ba8c` updates the in-app support URL after the authorized repository rename to `for-real-labs/opencrossword`. The on-device name remains OpenCrossword; the App Store name is Crossword: No Ads. The release bundle was rebuilt and signed using the same process, with build number 6 also set in EAS. New feature images are being prepared before resubmission; see release-status.json for the current state.
+Source `212ba8c` updates the in-app support URL after the authorized repository rename to `for-real-labs/opencrossword`. The on-device name remains OpenCrossword; the App Store name is Crossword: No Ads. The release bundle was rebuilt and signed using the same process, with build number 6 also set in EAS. Six feature images combine real native captures with original fal.ai artwork. See release-status.json for the current Apple review state.
