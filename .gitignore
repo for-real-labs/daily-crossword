@@ -10,3 +10,4 @@ android/
 credentials.json
 .DS_Store
 coverage/
+__pycache__/

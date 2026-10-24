@@ -1,0 +1,92 @@
+[
+  {
+    "file": "app-store/feature-images/iphone/01-free.png",
+    "size": [
+      1320,
+      2868
+    ],
+    "source": "app-store/screenshots/iphone/01-home.png",
+    "sourceSha256": "4866e401103d3dbeb5d5572b344404f2e537cf6d02d2b3bcf580591a1c4be81a",
+    "crop": [
+      0,
+      230,
+      1320,
+      1810
+    ]
+  },
+  {
+    "file": "app-store/feature-images/iphone/02-daily.png",
+    "size": [
+      1320,
+      2868
+    ],
+    "source": "app-store/screenshots/iphone/02-puzzle.png",
+    "sourceSha256": "81b1e8ef4f950c21a906183e89161a624cd636ff32087eba1c9b48486b0b1f8f",
+    "crop": [
+      0,
+      200,
+      1320,
+      1950
+    ]
+  },
+  {
+    "file": "app-store/feature-images/iphone/03-progress.png",
+    "size": [
+      1320,
+      2868
+    ],
+    "source": "app-store/screenshots/iphone/03-continue.png",
+    "sourceSha256": "8a108944cf1b141f8ba221acac4568f48105470bf7e9302fb41b03d766695b27",
+    "crop": [
+      0,
+      230,
+      1320,
+      1830
+    ]
+  },
+  {
+    "file": "app-store/feature-images/ipad/01-free.png",
+    "size": [
+      2064,
+      2752
+    ],
+    "source": "app-store/design/sources/ipad-new.png",
+    "sourceSha256": "4eb7fb189b7aa173510d6fef47d4319d98bcee230caa21dc692d34e2ab8d5c94",
+    "crop": [
+      400,
+      80,
+      1664,
+      1120
+    ]
+  },
+  {
+    "file": "app-store/feature-images/ipad/02-daily.png",
+    "size": [
+      2064,
+      2752
+    ],
+    "source": "app-store/screenshots/ipad/02-puzzle.png",
+    "sourceSha256": "7a9b083184e35a76487635de4fe3c331c761e372001a1ec5f8f24ed4c4b4cb51",
+    "crop": [
+      390,
+      120,
+      1674,
+      1500
+    ]
+  },
+  {
+    "file": "app-store/feature-images/ipad/03-progress.png",
+    "size": [
+      2064,
+      2752
+    ],
+    "source": "app-store/screenshots/ipad/01-home.png",
+    "sourceSha256": "f4cd2911d90041b6d3a183635c58e9b47ef3cc1b356b40a196d871e9e618ce08",
+    "crop": [
+      400,
+      80,
+      1664,
+      1400
+    ]
+  }
+]
