@@ -342,7 +342,13 @@ const s = StyleSheet.create({
     color: colors.ink,
     fontFamily: fonts.medium,
   },
-  letter: { fontFamily: fonts.medium, color: colors.ink, paddingTop: 7 },
+  letter: {
+    fontFamily: fonts.medium,
+    color: colors.ink,
+    paddingTop: 7,
+    width: "100%",
+    textAlign: "center",
+  },
   errorDot: {
     position: "absolute",
     bottom: 3,
