@@ -2,7 +2,7 @@
   "expo": {
     "name": "OpenCrossword",
     "slug": "daily-crossword",
-    "owner": "jakesessiongalaxys-team",
+    "owner": "jjohnson5253",
     "version": "1.0.0",
     "scheme": "dailycrossword",
     "orientation": "portrait",
@@ -11,7 +11,7 @@
     "backgroundColor": "#F7F6F0",
     "ios": {
       "bundleIdentifier": "com.forreallabs.dailycrossword",
-      "buildNumber": "1",
+      "buildNumber": "6",
       "supportsTablet": true,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
@@ -27,7 +27,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "0052d217-6108-470d-bd31-b508a63ba306"
+        "projectId": "58f0a11e-e3d9-4539-9549-69dd0fe8cc35"
       }
     }
   }
