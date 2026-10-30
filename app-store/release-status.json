@@ -3,50 +3,44 @@
   "versionId": "de95169d-6a42-4d71-aba3-da8da2ba366a",
   "localizationId": "063aa70f-b5da-423d-93ae-bfca93340c2c",
   "status": "WAITING_FOR_REVIEW",
-  "productionBuildId": null,
+  "productionBuildId": "13e53f0a-1845-4318-91f1-2e1d3acf0df0",
   "simulatorBuildId": "baa45881-39cb-46ed-821b-d3743cf15797",
-  "submissionId": "003b144a-4a94-430c-b278-394d2e7e6786",
+  "submissionId": "a42709a3-e7e8-4405-a03f-eec287e69345",
   "uploadStatus": "VALID",
   "price": "FREE",
   "privacy": "DATA_NOT_COLLECTED",
   "releaseType": "AFTER_APPROVAL",
   "territories": 175,
-  "buildNumber": "6",
-  "sourceCommit": "212ba8c44c9bb622a5da39b2643b50231e01fe4f",
-  "nativeBaseBuildId": "42f6f019-6de1-4836-9c5c-515cbc302122",
-  "appleBuildId": "844a0b87-936c-4420-9ec4-336262a6c829",
-  "packaging": "Existing EAS native binary with rebuilt Hermes bundle, locally signed with the existing Apple distribution certificate",
-  "archiveSha256": "4484a084a67e28268379d5b2478a3b8d88fe1bffb25f60265f597c6d53b9166a",
-  "bundleSha256": "a3579fd1bd1d2317e149e01d56b3aecbd0765ca92db41017988c9c097bcca284",
-  "reviewSubmissionId": "d6c72297-a818-46ea-9887-54ed1f997a2a",
-  "submittedDate": "2026-10-24T23:35:28.958Z",
+  "buildNumber": "8",
+  "sourceCommit": "50e4f26ecdf7dc5c7fbdc72034a43bb2ffb49b81",
+  "appleBuildId": "49b250ba-8280-4776-9234-2cc80c50c7af",
+  "packaging": "Standard EAS cloud production build",
+  "archiveSha256": "bfbb5b4a280e852e0922a5dddf1378f5bbeab3e82e0f2fe1161231f92eba3310",
+  "bundleSha256": "7877a842a60ddce74781c9ab7dffdeb194a332a5f6f496b74d1e962c64e51b00",
+  "reviewSubmissionId": "564ea8ff-4dc0-4fd2-b119-3329a84ea13c",
+  "submittedDate": "2026-10-30T14:17:04.057Z",
   "reviewStatus": "WAITING_FOR_REVIEW",
   "name": "Crossword: No Ads",
   "storeScreenshots": {
     "iphone": [
       "01-free.png",
-      "02-daily.png",
+      "02-daily-newspaper.png",
       "03-progress.png"
     ],
     "ipad": [
       "01-free.png",
-      "02-daily.png",
+      "02-daily-newspaper.png",
       "03-progress.png"
     ]
   },
-  "pendingUpdate": {
-    "date": "2026-10-30",
-    "feature": "Full-size 15x15 newspaper-style crosswords",
-    "status": "BUILDING",
-    "validation": "app-store/newspaper-validation.json",
-    "nextSteps": [
-      "Wait for production build to finish, then submit to App Store Connect",
-      "Replace the pending App Review build and screenshots, then submit for review"
-    ],
-    "expoOwner": "jjohnson5253",
-    "expoProjectId": "58f0a11e-e3d9-4539-9549-69dd0fe8cc35",
-    "previousExpoProjectId": "0052d217-6108-470d-bd31-b508a63ba306",
-    "productionBuildId": "13e53f0a-1845-4318-91f1-2e1d3acf0df0",
-    "buildNumber": "8"
+  "expoOwner": "jjohnson5253",
+  "expoProjectId": "58f0a11e-e3d9-4539-9549-69dd0fe8cc35",
+  "previousExpoProjectId": "0052d217-6108-470d-bd31-b508a63ba306",
+  "previousRelease": "app-store/releases/build-6.json",
+  "validation": "app-store/newspaper-validation.json",
+  "testFlight": {
+    "group": "Team (Expo)",
+    "groupId": "86feff11-cb06-4f5b-8896-cbaeacfeaba3",
+    "internalBuildState": "IN_BETA_TESTING"
   }
 }

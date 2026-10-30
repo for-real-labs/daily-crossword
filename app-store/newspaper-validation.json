@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "status": "VALIDATED_SOURCE_NOT_UPLOADED",
+  "status": "WAITING_FOR_REVIEW",
   "puzzles": {
     "count": 3000,
     "grid": "15x15",
@@ -32,6 +32,13 @@
   "bundleSha256": "914e40003e15d4646099b6cda8db4fa967f582d9e740a0b0bbebb1d7a388c77f",
   "puzzlesSha256": "43c526da838bef1714aec1441a16840a03ed58c1a2936bf18986a7416b6e129b",
   "legacyLibraryUnchanged": "abf11e8c02d1b8406033006e794769dd110515561c858ecb26cdb42c98c2c45a",
-  "productionBuildUploaded": false,
-  "appStoreStateVerified": "Existing version 1.0.0 remains WAITING_FOR_REVIEW; this update is not included."
+  "productionBuildUploaded": true,
+  "appStoreStateVerified": "Build 8 selected; version 1.0.0 WAITING_FOR_REVIEW; AFTER_APPROVAL release",
+  "productionBuildId": "13e53f0a-1845-4318-91f1-2e1d3acf0df0",
+  "buildNumber": "8",
+  "releaseArchiveSha256": "bfbb5b4a280e852e0922a5dddf1378f5bbeab3e82e0f2fe1161231f92eba3310",
+  "releaseBundleSha256": "7877a842a60ddce74781c9ab7dffdeb194a332a5f6f496b74d1e962c64e51b00",
+  "releaseBundleNativeCheck": "Exact Hermes bundle extracted from the cloud-built IPA installed in the matching existing Expo SDK 57 simulator binary on iPhone SE 3; saved CLAMP answer survives relaunch, Check reports Looking good, board/clue/keyboard fit visually.",
+  "signatureVerification": "codesign --verify --deep --strict: PASS",
+  "githubCI": "PASS for 50e4f26ecdf7dc5c7fbdc72034a43bb2ffb49b81"
 }
