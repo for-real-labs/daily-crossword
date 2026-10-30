@@ -33,5 +33,17 @@
       "02-daily.png",
       "03-progress.png"
     ]
+  },
+  "pendingUpdate": {
+    "date": "2026-10-30",
+    "feature": "Full-size 15x15 newspaper-style crosswords",
+    "status": "NOT_UPLOADED",
+    "blocker": "Expo CLI account jjohnson5253 cannot access project 0052d217-6108-470d-bd31-b508a63ba306 owned by jakesessiongalaxys-team. Local Xcode 16.2 is below the Expo SDK 57 requirement of 26.4.0.",
+    "validation": "app-store/newspaper-validation.json",
+    "nextSteps": [
+      "Sign in to an Expo account with jakesessiongalaxys-team access",
+      "Build production iOS with the next available build number and submit to App Store Connect",
+      "Replace the pending App Review build and screenshots, then submit for review"
+    ]
   }
 }

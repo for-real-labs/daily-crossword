@@ -22,7 +22,7 @@ def card(canvas,path,box,x,y,width):
     mask=Image.new('L',src.size);ImageDraw.Draw(mask).rounded_rectangle((0,0,width-1,height-1),radius,fill=255)
     canvas.paste(src,(x,y),mask)
     ImageDraw.Draw(canvas).rounded_rectangle((x,y,x+width-1,y+height-1),radius,outline=(255,255,255,220),width=5)
-HEADLINES=[('100% free.','Zero ads.','Just daily crosswords.'),('One puzzle.','Every day.','A little space to think.'),('Your pace.','Your progress.','Pick up where you left off.')]
+HEADLINES=[('100% free.','Zero ads.','Just daily crosswords.'),('Full-size grids.','Every day.','A little space to think.'),('Your pace.','Your progress.','Pick up where you left off.')]
 manifest=[]
 for device,w,h in [('iphone',1320,2868),('ipad',2064,2752)]:
     backdrop=ImageOps.fit(Image.open(DESIGN/'generated/quiet-studio.jpg').convert('RGB'),(w*3,h),method=Image.Resampling.LANCZOS)
@@ -40,12 +40,12 @@ for device,w,h in [('iphone',1320,2868),('ipad',2064,2752)]:
         shots=ROOT/'app-store/screenshots'/device
         if device=='iphone':
             names=['01-home.png','02-puzzle.png','03-continue.png']
-            boxes=[(0,230,1320,1810),(0,200,1320,1950),(0,230,1320,1830)]
+            boxes=[(0,230,1320,1810),(0,200,1320,2220),(0,230,1320,1830)]
             cw=1120 if i==1 else 1080
             cy=885 if i==1 else 955
         else:
             names=['01-home.png','02-puzzle.png','01-home.png']
-            boxes=[(400,80,1664,1120),(390,120,1674,1500),(400,80,1664,1400)]
+            boxes=[(400,80,1664,1120),(390,500,1674,1800),(400,80,1664,1400)]
             cw=1500 if i==1 else 1450
             cy=850
         path=DESIGN/'sources/ipad-new.png' if device=='ipad' and i==0 else shots/names[i]

@@ -1,6 +1,9 @@
 import { describe, it, expect } from "vitest";
 import {
   puzzles,
+  getGamePuzzle,
+  getPuzzle,
+  progress,
   freshState,
   startGame,
   canStart,
@@ -97,7 +100,30 @@ describe("all bundled crosswords", () => {
     for (const [index, p] of puzzles.entries()) {
       expect(p.id).toBe(index + 1);
       expect(p.rows).toHaveLength(p.size);
-      expect(p.entries.length).toBeGreaterThanOrEqual(9);
+      expect(p.size).toBe(15);
+      expect(p.entries.length).toBeGreaterThanOrEqual(70);
+      expect(p.entries.length).toBeLessThanOrEqual(82);
+      expect(new Set(p.entries.map((e) => e.answer)).size).toBe(
+        p.entries.length
+      );
+      expect(p.rows.join("").split(".").length - 1).toBeLessThanOrEqual(40);
+      expect(
+        Math.max(...p.entries.map((e) => e.answer.length))
+      ).toBeGreaterThanOrEqual(7);
+      const coverage = new Map<string, Set<string>>();
+      for (const e of p.entries)
+        for (const key of entryCells(e)) {
+          const directions = coverage.get(key) ?? new Set<string>();
+          directions.add(e.direction);
+          coverage.set(key, directions);
+        }
+      for (const directions of coverage.values())
+        expect(directions.size).toBe(2);
+      for (let r = 0; r < p.size; r++) {
+        expect(p.rows[r]).toHaveLength(15);
+        for (let c = 0; c < p.size; c++)
+          expect(p.rows[r][c] === ".").toBe(p.rows[14 - r][14 - c] === ".");
+      }
       const represented = new Set<string>(),
         starts = [
           ...new Set(p.entries.map((e) => e.row * p.size + e.col)),
@@ -158,7 +184,7 @@ describe("all bundled crosswords", () => {
       }
       expect(seen.size).toBe(represented.size);
     }
-  });
+  }, 120000);
 });
 function memory() {
   let value: string | null = null,
@@ -231,5 +257,83 @@ describe("durable saves", () => {
     const reopened = new GameRepository(store);
     await reopened.load();
     expect(reopened.state.games[0].cells[key]).toBe("B");
+  });
+});
+
+describe("upgrading from mini crosswords", () => {
+  it("keeps saved letters and completed mini puzzles attached to their original grids", () => {
+    const old = getPuzzle(1, "legacy");
+    const cells = Object.fromEntries(
+      old.rows.flatMap((row, r) =>
+        [...row].flatMap((letter, c) =>
+          letter === "." ? [] : [[cellKey(r, c), letter]]
+        )
+      )
+    );
+    const saved = {
+      version: 1,
+      next: 1,
+      lastDay: "2026-10-24",
+      games: [
+        {
+          puzzleId: 1,
+          day: "2026-10-24",
+          openedAt: 123,
+          cells,
+          completedAt: 124,
+        },
+      ],
+    };
+    const state = readState(JSON.stringify(saved));
+    expect(state).toEqual(saved);
+    expect(getGamePuzzle(state.games[0]).size).toBe(9);
+    expect(progress(state.games[0])).toBe(100);
+    const next = startGame(state, date(25));
+    expect(getGamePuzzle(next.games[0]).size).toBe(15);
+    expect(next.games[0].edition).toBe("newspaper");
+    expect(next.games[1]).toEqual(saved.games[0]);
+    expect(readState(JSON.stringify(next))).toEqual(next);
+  });
+  it("recovers reservations with the edition they were created for", () => {
+    for (const edition of [undefined, "newspaper"] as const) {
+      const state = reconcile(freshState(), {
+        next: 1,
+        lastDay: "2026-10-24",
+        pending: { puzzleId: 1, day: "2026-10-24", openedAt: 1, edition },
+      });
+      expect(getGamePuzzle(state.games[0]).size).toBe(edition ? 15 : 9);
+      expect(readState(JSON.stringify(state))).toEqual(state);
+    }
+  });
+  it("edits an unfinished old puzzle using its old coordinates", () => {
+    const old = getPuzzle(1, "legacy");
+    const key = entryCells(old.entries[0])[0];
+    const state = readState(
+      JSON.stringify({
+        version: 1,
+        next: 1,
+        lastDay: "2026-10-24",
+        games: [
+          {
+            puzzleId: 1,
+            day: "2026-10-24",
+            openedAt: 1,
+            cells: {},
+            completedAt: null,
+          },
+        ],
+      })
+    );
+    expect(
+      updateCell(state, 1, key, old.entries[0].answer[0]).games[0].cells[key]
+    ).toBe(old.entries[0].answer[0]);
+  });
+  it("rejects an unknown edition instead of assigning the wrong grid", () => {
+    const state = startGame(freshState(), date(24));
+    const invalid = {
+      ...state,
+      games: [{ ...state.games[0], edition: "unknown" }],
+    };
+    expect(() => readState(JSON.stringify(invalid))).toThrow();
   });
 });

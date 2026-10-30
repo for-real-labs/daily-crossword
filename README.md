@@ -17,9 +17,11 @@ npm run typecheck
 
 ## Puzzle library
 
-`data/words.txt` contains 439 original concise clues. `npm run puzzles` deterministically generates 3,000 connected 9×9 mini crosswords. Every grid and answer set is unique; individual words and clues recur across different puzzles. These are compact crisscross grids, without a rotational-symmetry requirement. All puzzles ship inside the app; no downloaded or scraped crossword content.
+The daily library contains 3,000 full-size 15×15 crosswords with 70–82 clues per puzzle. Black squares have 180-degree rotational symmetry, every white square belongs to both an Across and a Down answer, all answers are at least three letters, and every grid is connected. Pinch to enlarge the grid on iOS.
 
-Tests verify every grid's answers, numbering, clue coverage, crossings, connectivity, uniqueness, and absence of unlisted adjacent words.
+`npm run puzzles` deterministically fills six original block patterns using Python 3.10+, a C++17 compiler, and the pinned CC0 word/clue bank. Generation is reproducible with the same compiler and standard library. The generator is a development tool; puzzles ship inside the app and need no network connection. See [content provenance](data/SOURCES.md). Every grid and answer set is unique; individual words and clues recur across puzzles.
+
+Tests independently check the entire library for size, density, symmetry, numbering, answers, duplicate answers, clue coverage, crossings, connectivity, and uniqueness. `data/legacy-puzzles.json` retains the exact old 9×9 boards so saved and completed games remain readable. New games use the newspaper edition; the daily sequence and limits are preserved.
 
 ## Saving and daily limits
 

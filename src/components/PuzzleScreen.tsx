@@ -8,10 +8,10 @@ import {
   useWindowDimensions,
   Modal,
 } from "react-native";
-import { Game, Entry, cellKey, entryCells, getPuzzle } from "../game";
+import { Game, Entry, cellKey, entryCells, getGamePuzzle } from "../game";
 import { colors, fonts } from "../theme";
 import { Button } from "./Button";
-import { boardGeometry } from "../layout";
+import { boardGeometry, cellTypography } from "../layout";
 export function PuzzleScreen({
   game,
   onCell,
@@ -21,16 +21,23 @@ export function PuzzleScreen({
   onCell: (key: string, value: string) => void;
   onBack: () => void;
 }) {
-  const p = getPuzzle(game.puzzleId),
+  const p = getGamePuzzle(game),
     { width, height } = useWindowDimensions();
   const [entryIndex, setEntryIndex] = useState(0),
     [selected, setSelected] = useState(entryCells(p.entries[0])[0]),
     [showClues, setShowClues] = useState(false),
-    [checking, setChecking] = useState(false);
+    [checking, setChecking] = useState(false),
+    [playHeight, setPlayHeight] = useState<number>();
   const entry = p.entries[entryIndex],
     activeCells = entryCells(entry),
     done = !!game.completedAt;
-  const { boardWidth, cellSize } = boardGeometry(width, height, p.size);
+  const { boardWidth, cellSize } = boardGeometry(
+    width,
+    height,
+    p.size,
+    playHeight
+  );
+  const typography = cellTypography(cellSize);
   const selectEntry = (index: number) => {
     setEntryIndex(index);
     setSelected(entryCells(p.entries[index])[0]);
@@ -118,127 +125,146 @@ export function PuzzleScreen({
         <Text style={s.heading}>Puzzle {String(p.id).padStart(3, "0")}</Text>
         <Button quiet label="Clues" onPress={() => setShowClues(true)} />
       </View>
-      <ScrollView contentContainerStyle={s.playContent} style={{ flex: 1 }}>
-        <View style={[s.board, { width: boardWidth, height: boardWidth }]}>
-          {p.rows.map((row, r) => (
-            <View
-              key={r}
-              style={{
-                flexDirection: "row",
-                height: cellSize,
-                width: boardWidth,
-              }}
-            >
-              {[...row].map((letter, c) => {
-                const key = cellKey(r, c),
-                  number = p.entries.find(
-                    (e) => e.row === r && e.col === c
-                  )?.number;
-                if (letter === ".")
+      <View
+        style={s.playArea}
+        onLayout={({ nativeEvent }) => setPlayHeight(nativeEvent.layout.height)}
+      >
+        <ScrollView
+          style={{ width: boardWidth, height: boardWidth, flexGrow: 0 }}
+          minimumZoomScale={1}
+          maximumZoomScale={3}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          bounces={false}
+          accessibilityHint="Pinch to enlarge the crossword grid"
+        >
+          <View style={[s.board, { width: boardWidth, height: boardWidth }]}>
+            {p.rows.map((row, r) => (
+              <View
+                key={r}
+                style={{
+                  flexDirection: "row",
+                  height: cellSize,
+                  width: boardWidth,
+                }}
+              >
+                {[...row].map((letter, c) => {
+                  const key = cellKey(r, c),
+                    number = p.entries.find(
+                      (e) => e.row === r && e.col === c
+                    )?.number;
+                  if (letter === ".")
+                    return (
+                      <View
+                        key={key}
+                        style={{
+                          width: cellSize,
+                          height: cellSize,
+                          backgroundColor: colors.ink,
+                        }}
+                      />
+                    );
+                  const error = checking && incorrect.includes(key);
                   return (
-                    <View
+                    <Pressable
                       key={key}
-                      style={{
-                        width: cellSize,
-                        height: cellSize,
-                        backgroundColor: colors.ink,
-                      }}
-                    />
-                  );
-                const error = checking && incorrect.includes(key);
-                return (
-                  <Pressable
-                    key={key}
-                    accessibilityRole="button"
-                    accessibilityLabel={`Row ${r + 1}, column ${c + 1}${
-                      number ? `, ${number}` : ""
-                    }, ${game.cells[key] || "blank"}${
-                      error ? ", incorrect" : ""
-                    }`}
-                    accessibilityState={{ selected: selected === key }}
-                    onPress={() => selectCell(key)}
-                    style={[
-                      s.cell,
-                      { width: cellSize, height: cellSize },
-                      activeCells.includes(key) && {
-                        backgroundColor: colors.highlight,
-                      },
-                      selected === key &&
-                        !done && { backgroundColor: colors.lime },
-                      done && { backgroundColor: "#F0F5E6" },
-                      error && { backgroundColor: "#F8DAD1" },
-                    ]}
-                  >
-                    {number && (
+                      accessibilityRole="button"
+                      accessibilityLabel={`Row ${r + 1}, column ${c + 1}${
+                        number ? `, ${number}` : ""
+                      }, ${game.cells[key] || "blank"}${
+                        error ? ", incorrect" : ""
+                      }`}
+                      accessibilityState={{ selected: selected === key }}
+                      onPress={() => selectCell(key)}
+                      style={[
+                        s.cell,
+                        { width: cellSize, height: cellSize },
+                        activeCells.includes(key) && {
+                          backgroundColor: colors.highlight,
+                        },
+                        selected === key &&
+                          !done && { backgroundColor: colors.lime },
+                        done && { backgroundColor: "#F0F5E6" },
+                        error && { backgroundColor: "#F8DAD1" },
+                      ]}
+                    >
+                      {number && (
+                        <Text
+                          allowFontScaling={false}
+                          style={[
+                            s.number,
+                            {
+                              fontSize: typography.numberSize,
+                              lineHeight: typography.numberLineHeight,
+                              left: 1,
+                            },
+                          ]}
+                        >
+                          {number}
+                        </Text>
+                      )}
                       <Text
                         allowFontScaling={false}
                         style={[
-                          s.number,
-                          { fontSize: Math.max(8, cellSize * 0.23) },
+                          s.letter,
+                          {
+                            fontSize: typography.letterSize,
+                            lineHeight: typography.letterLineHeight,
+                            paddingTop: typography.letterTop,
+                          },
+                          error && { color: colors.error },
                         ]}
                       >
-                        {number}
+                        {game.cells[key] || ""}
                       </Text>
-                    )}
-                    <Text
-                      allowFontScaling={false}
-                      style={[
-                        s.letter,
-                        { fontSize: cellSize * 0.53 },
-                        error && { color: colors.error },
-                      ]}
-                    >
-                      {game.cells[key] || ""}
-                    </Text>
-                    {error && <View style={s.errorDot} />}
-                  </Pressable>
-                );
-              })}
-            </View>
-          ))}
-        </View>
-        {caption && (
-          <Text
-            accessibilityLiveRegion="polite"
-            style={[
-              s.caption,
-              done && { color: colors.green, fontFamily: fonts.medium },
-            ]}
-          >
-            {caption}
+                      {error && <View style={s.errorDot} />}
+                    </Pressable>
+                  );
+                })}
+              </View>
+            ))}
+          </View>
+        </ScrollView>
+      </View>
+      {caption && (
+        <Text
+          accessibilityLiveRegion="polite"
+          style={[
+            s.caption,
+            done && { color: colors.green, fontFamily: fonts.medium },
+          ]}
+        >
+          {caption}
+        </Text>
+      )}
+      <View style={s.clueBar}>
+        <Button
+          quiet
+          label="‹"
+          accessibilityLabel="Previous clue"
+          onPress={() =>
+            selectEntry((entryIndex + p.entries.length - 1) % p.entries.length)
+          }
+        />
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Show all clues"
+          onPress={() => setShowClues(true)}
+          style={s.currentClue}
+        >
+          <Text style={s.clueLabel}>
+            {entry.number} {entry.direction.toUpperCase()} ·{" "}
+            {entry.answer.length}
           </Text>
-        )}
-        <View style={s.clueBar}>
-          <Button
-            quiet
-            label="‹"
-            accessibilityLabel="Previous clue"
-            onPress={() =>
-              selectEntry(
-                (entryIndex + p.entries.length - 1) % p.entries.length
-              )
-            }
-          />
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel="Show all clues"
-            onPress={() => setShowClues(true)}
-            style={s.currentClue}
-          >
-            <Text style={s.clueLabel}>
-              {entry.number} {entry.direction.toUpperCase()} ·{" "}
-              {entry.answer.length}
-            </Text>
-            <Text style={s.currentText}>{entry.clue}</Text>
-          </Pressable>
-          <Button
-            quiet
-            label="›"
-            accessibilityLabel="Next clue"
-            onPress={() => selectEntry((entryIndex + 1) % p.entries.length)}
-          />
-        </View>
-      </ScrollView>
+          <Text style={s.currentText}>{entry.clue}</Text>
+        </Pressable>
+        <Button
+          quiet
+          label="›"
+          accessibilityLabel="Next clue"
+          onPress={() => selectEntry((entryIndex + 1) % p.entries.length)}
+        />
+      </View>
       {done ? (
         <View style={s.done}>
           <Button label="Done" onPress={onBack} />
@@ -271,6 +297,7 @@ export function PuzzleScreen({
                   onPress={() => type(key)}
                   style={({ pressed }) => [
                     s.key,
+                    height < 750 && { height: 44 },
                     pressed && { backgroundColor: colors.lime },
                   ]}
                 >
@@ -321,11 +348,16 @@ const s = StyleSheet.create({
     paddingVertical: 8,
   },
   heading: { fontFamily: fonts.medium, color: colors.ink, fontSize: 15 },
-  playContent: { alignItems: "center", paddingTop: 8, paddingBottom: 8 },
+  playArea: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: 0,
+  },
   board: {
     flexDirection: "column",
     backgroundColor: colors.ink,
-    borderRadius: 8,
+    borderRadius: 2,
     overflow: "hidden",
   },
   cell: {
@@ -369,7 +401,7 @@ const s = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     paddingHorizontal: 8,
-    marginTop: 16,
+    marginTop: 8,
     minHeight: 86,
   },
   currentClue: { flex: 1, paddingVertical: 10, paddingHorizontal: 8 },

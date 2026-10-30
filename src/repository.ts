@@ -51,7 +51,12 @@ export class GameRepository {
       const ledger: Ledger = {
         next: next.next,
         lastDay: next.lastDay,
-        pending: { puzzleId: g.puzzleId, day: g.day, openedAt: g.openedAt },
+        pending: {
+          puzzleId: g.puzzleId,
+          day: g.day,
+          openedAt: g.openedAt,
+          edition: g.edition,
+        },
       };
       // Reserve first. If writing the game fails, load() recovers this exact puzzle.
       await this.store.writeLedger(JSON.stringify(ledger));

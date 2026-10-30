@@ -21,12 +21,12 @@
       2868
     ],
     "source": "app-store/screenshots/iphone/02-puzzle.png",
-    "sourceSha256": "81b1e8ef4f950c21a906183e89161a624cd636ff32087eba1c9b48486b0b1f8f",
+    "sourceSha256": "25df7123b71aef4be223b5c615419271ddc574c24a0ddae719ee8fe9a04c74ee",
     "crop": [
       0,
       200,
       1320,
-      1950
+      2220
     ]
   },
   {
@@ -66,12 +66,12 @@
       2752
     ],
     "source": "app-store/screenshots/ipad/02-puzzle.png",
-    "sourceSha256": "7a9b083184e35a76487635de4fe3c331c761e372001a1ec5f8f24ed4c4b4cb51",
+    "sourceSha256": "1f02ef742b838c4d47a6b6128f2f3e355668277d4ed575a449fa00b15228324e",
     "crop": [
       390,
-      120,
+      500,
       1674,
-      1500
+      1800
     ]
   },
   {

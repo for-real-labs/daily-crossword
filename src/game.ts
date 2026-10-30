@@ -1,4 +1,6 @@
 import bundled from "../data/puzzles.json";
+import legacy from "../data/legacy-puzzles.json";
+export type Edition = "newspaper";
 export type Direction = "across" | "down";
 export interface Entry {
   answer: string;
@@ -15,6 +17,8 @@ export interface Puzzle {
   entries: Entry[];
 }
 export interface Game {
+  // Missing on saves created before full-size crosswords.
+  edition?: Edition;
   puzzleId: number;
   day: string;
   openedAt: number;
@@ -30,7 +34,12 @@ export interface State {
 export interface Ledger {
   next: number;
   lastDay: string;
-  pending: { puzzleId: number; day: string; openedAt: number } | null;
+  pending: {
+    puzzleId: number;
+    day: string;
+    openedAt: number;
+    edition?: Edition;
+  } | null;
 }
 export const puzzles = bundled as Puzzle[];
 export const freshState = (): State => ({
@@ -53,11 +62,19 @@ export function entryCells(entry: Entry) {
     )
   );
 }
-export const getPuzzle = (id: number) => {
-  const p = puzzles[id - 1];
+export const getPuzzle = (
+  id: number,
+  edition: "newspaper" | "legacy" = "newspaper"
+) => {
+  const p = (edition === "legacy" ? legacy : puzzles)[id - 1] as Puzzle;
   if (!p || p.id !== id) throw Error("Unknown puzzle");
   return p;
 };
+export const getGamePuzzle = (game: Pick<Game, "puzzleId" | "edition">) =>
+  getPuzzle(
+    game.puzzleId,
+    game.edition === "newspaper" ? "newspaper" : "legacy"
+  );
 export function canStart(state: State, day = dayKey()) {
   return state.next < puzzles.length && day > state.lastDay;
 }
@@ -65,6 +82,7 @@ export function startGame(state: State, date = new Date()): State {
   const day = dayKey(date);
   if (!canStart(state, day)) return state;
   const game: Game = {
+    edition: "newspaper",
     puzzleId: puzzles[state.next].id,
     day,
     openedAt: date.getTime(),
@@ -92,7 +110,9 @@ export function updateCell(
   value: string,
   now = Date.now()
 ): State {
-  const p = getPuzzle(id),
+  const game = state.games.find((g) => g.puzzleId === id);
+  if (!game) return state;
+  const p = getGamePuzzle(game),
     [r, c] = key.split(",").map(Number);
   if (
     !Number.isInteger(r) ||
@@ -129,7 +149,7 @@ export const orderedGames = (state: State, complete: boolean) =>
     .filter((g) => Boolean(g.completedAt) === complete)
     .sort((a, b) => b.openedAt - a.openedAt);
 export function progress(game: Game) {
-  const p = getPuzzle(game.puzzleId);
+  const p = getGamePuzzle(game);
   const total = p.rows.join("").replaceAll(".", "").length;
   const filled = Object.values(game.cells).filter(Boolean).length;
   return Math.round((100 * filled) / total);
@@ -148,8 +168,9 @@ export function readState(raw: string | null): State {
     throw Error("Invalid save");
   const ids = new Set<number>();
   for (const g of s.games) {
-    const p = getPuzzle(g.puzzleId);
+    const p = getGamePuzzle(g);
     if (
+      (g.edition !== undefined && g.edition !== "newspaper") ||
       ids.has(g.puzzleId) ||
       g.puzzleId > s.next ||
       !/^\d{4}-\d{2}-\d{2}$/.test(g.day) ||
@@ -192,8 +213,9 @@ export function reconcile(state: State, ledger: Ledger | null): State {
     !games.some((g) => g.puzzleId === ledger.pending!.puzzleId)
   ) {
     const pending = ledger.pending;
-    getPuzzle(pending.puzzleId);
+    getGamePuzzle(pending);
     if (
+      (pending.edition !== undefined && pending.edition !== "newspaper") ||
       pending.puzzleId !== ledger.next ||
       pending.day !== ledger.lastDay ||
       !Number.isFinite(pending.openedAt)

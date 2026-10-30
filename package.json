@@ -7,7 +7,7 @@
     "start": "expo start",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "test": "vitest run",
+    "test": "vitest run && python3 -m unittest discover -s tests -p \"test_*.py\"",
     "typecheck": "tsc --noEmit",
     "puzzles": "node scripts/generate-puzzles.mjs",
     "build:ios": "npx eas-cli build -p ios --profile production",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "open-crossword-bank": "1.0.2",
     "sharp": "^0.35.5",
     "typescript": "~6.0.3",
     "vitest": "^4.1.11"

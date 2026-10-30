@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-30",
+  "status": "VALIDATED_SOURCE_NOT_UPLOADED",
+  "puzzles": {
+    "count": 3000,
+    "grid": "15x15",
+    "clues": [
+      74,
+      78
+    ],
+    "fullyCrossed": true,
+    "connected": true,
+    "rotationallySymmetricBlocks": true,
+    "uniqueGridsAndAnswerSets": true
+  },
+  "automatedTests": {
+    "vitest": 34,
+    "generator": 2,
+    "storeExports": 2
+  },
+  "typecheck": "PASS",
+  "productionIOSExport": "PASS",
+  "productionHermesBundle": "PASS",
+  "expoDoctor": "20/21 pass; installed Xcode 16.2 does not meet Expo SDK 57 native-build requirement 26.4.0",
+  "nativeChecks": [
+    "iPhone SE 3: full board, clue and keyboard visible; enter CLAMP and Check reports Looking good; full clue list opens",
+    "iPhone 16 Pro Max: full-size puzzle opens and fits",
+    "iPad Pro 13-inch M4: full-size puzzle opens and fits",
+    "Upgrade on iPhone 16 Pro Max: original mini-puzzle and saved F at row 2 column 3 preserved"
+  ],
+  "simulatorMethod": "Installed unchanged existing Expo native simulator binary with the newly exported production Hermes bundle. No runtime native dependencies changed.",
+  "bundleSha256": "914e40003e15d4646099b6cda8db4fa967f582d9e740a0b0bbebb1d7a388c77f",
+  "puzzlesSha256": "43c526da838bef1714aec1441a16840a03ed58c1a2936bf18986a7416b6e129b",
+  "legacyLibraryUnchanged": "abf11e8c02d1b8406033006e794769dd110515561c858ecb26cdb42c98c2c45a",
+  "productionBuildUploaded": false,
+  "appStoreStateVerified": "Existing version 1.0.0 remains WAITING_FOR_REVIEW; this update is not included."
+}
